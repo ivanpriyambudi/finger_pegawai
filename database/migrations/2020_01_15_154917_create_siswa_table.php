@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKepsekTable extends Migration
+class CreateSiswaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateKepsekTable extends Migration
      */
     public function up()
     {
-        Schema::create('kepsek', function (Blueprint $table) {
+        Schema::create('siswa', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
@@ -30,6 +30,6 @@ class CreateKepsekTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kepsek');
+        Schema::dropIfExists('siswa');
     }
 }

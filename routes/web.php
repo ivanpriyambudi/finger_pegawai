@@ -3,15 +3,20 @@
 //---------------------------------------------------------------------------------// Logout
 Route::get('/logout', 'LoginController@logout');
 
+//---------------------------------------------------------------------------------// Login Siswa
+Route::get('/siswa', 'LoginController@LoginSiswa')
+->name('LoginSiswa')->middleware('guest');;
+Route::post('/LoginSiswa', 'LoginController@postLoginSiswa');
+
 //---------------------------------------------------------------------------------// Login Guru
 Route::get('/guru', 'LoginController@LoginGuru')
 ->name('LoginGuru')->middleware('guest');;
 Route::post('/LoginGuru', 'LoginController@postLoginGuru');
 
-//---------------------------------------------------------------------------------// Login Kepsek
-Route::get('/kepsek', 'LoginController@LoginKepsek')
-->name('LoginKepsek')->middleware('guest');
-Route::post('/LoginKepsek', 'LoginController@postLoginKepsek');
+//---------------------------------------------------------------------------------// Login Wali Murid
+Route::get('/wali-murid', 'LoginController@LoginWaliMurid')
+->name('LoginWaliMurid')->middleware('guest');
+Route::post('/LoginWaliMurid', 'LoginController@postLoginWaliMurid');
 
 //---------------------------------------------------------------------------------// Login Admin Sekolah
 Route::get('/admin-sekolah', 'LoginController@LoginAdminSekolah')
@@ -35,7 +40,9 @@ Route::post('/LoginAdminMaster', 'LoginController@postLoginAdminMaster');
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+//---------------------------------------------------------------------------------// Siswa
+Route::get('/siswa/dashboard', 'SiswaController@DashboardSiswa')
+->name('DashboardSiswa')->middleware('auth:siswa');
 
 //---------------------------------------------------------------------------------// Guru
 Route::get('/guru/dashboard', 'GuruController@DashboardGuru')
@@ -44,9 +51,9 @@ Route::get('/guru/dashboard', 'GuruController@DashboardGuru')
 Route::get('/guru/absensi-hari-ini', 'GuruController@Absensi_hari')
 ->name('AbsensiHariIni')->middleware('auth:guru');
 
-//---------------------------------------------------------------------------------// Kepsek
-Route::get('/kepsek/dashboard', 'KepsekController@DashboardKepsek')
-->name('DashboardKepsek')->middleware('auth:kepsek');
+//---------------------------------------------------------------------------------// Wali Murid
+Route::get('/wali-murid/dashboard', 'WaliMuridController@DashboardWaliMurid')
+->name('DashboardWaliMurid')->middleware('auth:walimurid');
 
 //---------------------------------------------------------------------------------// Admin Sekolah
 Route::get('/admin-sekolah/dashboard', 'AdminSekolahController@DashboardAdminSekolah')

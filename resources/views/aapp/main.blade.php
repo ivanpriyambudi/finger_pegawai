@@ -6,9 +6,9 @@
     @endauth 
     @endif
 
-    @if(Auth::guard('kepsek'))
-    @auth('kepsek')
-    @include('kepsek.app.sidebar')
+    @if(Auth::guard('walimurid'))
+    @auth('walimurid')
+    @include('wali-murid.app.sidebar')
     @endauth 
     @endif
 

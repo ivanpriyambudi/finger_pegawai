@@ -17,8 +17,8 @@ class RedirectIfAuthenticated
     if (Auth::guard('guru')->check()) {
       return redirect('/guru/dashboard');
 
-    } else if (Auth::guard('kepsek')->check()) {
-      return redirect('/kepsek/dashboard');
+    } else if (Auth::guard('walimurid')->check()) {
+      return redirect('/wali-murid/dashboard');
       
     } else if (Auth::guard('adminsekolah')->check()) {
       return redirect('/adminsekolah/dashboard');
@@ -31,6 +31,9 @@ class RedirectIfAuthenticated
       
     } else if (Auth::guard('adminmaster')->check()) {
       return redirect('/adminmaster/dashboard');
+      
+    } else if (Auth::guard('siswa')->check()) {
+      return redirect('/siswa/dashboard');
       
     }
     return $next($request);

@@ -24,13 +24,13 @@ return [
             'provider' => 'guru',
         ],
 
-        'kepsek' => [
+        'walimurid' => [
           'driver' => 'session',
-          'provider' => 'kepsek',
+          'provider' => 'walimurid',
         ],
-        'kepsek-api' => [
+        'walimurid-api' => [
             'driver' => 'token',
-            'provider' => 'kepsek',
+            'provider' => 'walimurid',
         ],
 
         'adminsekolah' => [
@@ -69,12 +69,21 @@ return [
             'provider' => 'adminmaster',
         ],
 
+        'siswa' => [
+          'driver' => 'session',
+          'provider' => 'siswa',
+        ],
+        'siswa-api' => [
+            'driver' => 'token',
+            'provider' => 'siswa',
+        ],
+
     ],
     //  Providers
     'providers' => [
-        'kepsek' => [
+        'walimurid' => [
             'driver' => 'eloquent',
-            'model' => App\Kepsek::class,
+            'model' => App\WaliMurid::class,
         ],
         'guru' => [
           'driver' => 'eloquent',
@@ -95,6 +104,10 @@ return [
         'adminmaster' => [
           'driver' => 'eloquent',
           'model' => App\AdminMaster::class,
+        ],
+        'siswa' => [
+          'driver' => 'eloquent',
+          'model' => App\Siswa::class,
         ],
     ],
     // Password

@@ -11,7 +11,7 @@
 <body>
   <fieldset style="width:300px; margin:100px auto">
     <legend>Form Login</legend>
-    <form action="/LoginKepsek" method="post">
+    <form action="/LoginWaliMurid" method="post">
       {{ csrf_field() }}
       <table>
         <tr>

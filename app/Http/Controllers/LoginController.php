@@ -3,11 +3,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Guru;
-use App\Kepsek;
+use App\WaliMurid;
 use App\AdminSekolah;
 use App\AdminKecamatan;
 use App\AdminDinas;
 use App\AdminMaster;
+use App\Siswa;
 use Auth;
 
 class LoginController extends Controller
@@ -19,9 +20,9 @@ class LoginController extends Controller
     return view('guru.login');
   }
 
-  public function LoginKepsek()
+  public function LoginWaliMurid()
   {
-    return view('kepsek.login');
+    return view('wali-murid.login');
   }
 
   public function LoginAdminSekolah()
@@ -44,7 +45,28 @@ class LoginController extends Controller
     return view('admin-master.login');
   }
 
+  public function LoginSiswa()
+  {
+    return view('siswa.login');
+  }
+
   //---------------------------------------------------------------------------------// Backend
+  //---------------------------------------------------------------// Siswa
+  public function postLoginSiswa(Request $request)
+  {
+    $this->validate($request, [
+      'name' => 'required',
+      'password' => 'required'
+    ]);
+
+    if (Auth::guard('siswa')->attempt(['name' => $request->name, 'password' => $request->password])) {
+      return redirect()->route('DashboardSiswa');
+
+    } else {
+      return redirect()->route('LoginSiswa');
+    }
+  }
+
   //---------------------------------------------------------------// Guru
   public function postLoginGuru(Request $request)
   {
@@ -62,18 +84,18 @@ class LoginController extends Controller
   }
 
   //---------------------------------------------------------------// Kepsek
-  public function postLoginKepsek(Request $request)
+  public function postLoginWaliMurid(Request $request)
   {
     $this->validate($request, [
       'name' => 'required',
       'password' => 'required'
     ]);
 
-    if (Auth::guard('kepsek')->attempt(['name' => $request->name, 'password' => $request->password])) {
-      return redirect()->route('DashboardKepsek');
+    if (Auth::guard('walimurid')->attempt(['name' => $request->name, 'password' => $request->password])) {
+      return redirect()->route('DashboardWaliMurid');
 
     } else {
-      return redirect()->route('LoginKepsek');
+      return redirect()->route('LoginWaliMurid');
     }
   }
 
@@ -148,8 +170,8 @@ class LoginController extends Controller
     if (Auth::guard('guru')->check()) {
       Auth::guard('guru')->logout();
 
-    } else if (Auth::guard('kepsek')->check()) {
-      Auth::guard('kepsek')->logout();
+    } else if (Auth::guard('walimurid')->check()) {
+      Auth::guard('walimurid')->logout();
 
     } else if (Auth::guard('adminsekolah')->check()) {
       Auth::guard('adminsekolah')->logout();

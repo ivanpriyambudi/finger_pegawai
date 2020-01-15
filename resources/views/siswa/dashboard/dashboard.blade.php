@@ -17,7 +17,7 @@ Dashboard
 Dashboard
 @endsection
 @section('page-title-desk')
-Dashboard Absensi Kepsek
+Dashboard Wali Murid
 @endsection
 
 {{-- ---------------------------------------------------------------------- action-kanan --}}
