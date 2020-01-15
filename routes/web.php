@@ -1,62 +1,65 @@
 <?php
 
-/////////////////////////////////////////////////////////// Logout
+//---------------------------------------------------------------------------------// Logout
 Route::get('/logout', 'LoginController@logout');
 
-
-
-/////////////////////////////////////////////////////////// Login Guru
+//---------------------------------------------------------------------------------// Login Guru
 Route::get('/guru', 'LoginController@LoginGuru')
 ->name('LoginGuru')->middleware('guest');;
 Route::post('/LoginGuru', 'LoginController@postLoginGuru');
 
-/////////////////////////////////////////////////////////// Login Kepsek
+//---------------------------------------------------------------------------------// Login Kepsek
 Route::get('/kepsek', 'LoginController@LoginKepsek')
 ->name('LoginKepsek')->middleware('guest');
 Route::post('/LoginKepsek', 'LoginController@postLoginKepsek');
 
-/////////////////////////////////////////////////////////// Login Admin Sekolah
+//---------------------------------------------------------------------------------// Login Admin Sekolah
 Route::get('/admin-sekolah', 'LoginController@LoginAdminSekolah')
 ->name('LoginAdminSekolah')->middleware('guest');
 Route::post('/LoginAdminSekolah', 'LoginController@postLoginAdminSekolah');
 
-/////////////////////////////////////////////////////////// Login Admin Kecamatan
+//---------------------------------------------------------------------------------// Login Admin Kecamatan
 Route::get('/admin-kecamatan', 'LoginController@LoginAdminKecamatan')
 ->name('LoginAdminKecamatan')->middleware('guest');
 Route::post('/LoginAdminKecamatan', 'LoginController@postLoginAdminKecamatan');
 
-/////////////////////////////////////////////////////////// Login Admin Dinas
+//---------------------------------------------------------------------------------// Login Admin Dinas
 Route::get('/admin-dinas', 'LoginController@LoginAdminDinas')
 ->name('LoginAdminDinas')->middleware('guest');
 Route::post('/LoginAdminDinas', 'LoginController@postLoginAdminDinas');
 
-/////////////////////////////////////////////////////////// Login Admin Master
+//---------------------------------------------------------------------------------// Login Admin Master
 Route::get('/admin-master', 'LoginController@LoginAdminMaster')
 ->name('LoginAdminMaster')->middleware('guest');
 Route::post('/LoginAdminMaster', 'LoginController@postLoginAdminMaster');
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////////////////// Guru
+
+//---------------------------------------------------------------------------------// Guru
 Route::get('/guru/dashboard', 'GuruController@DashboardGuru')
 ->name('DashboardGuru')->middleware('auth:guru');
 
-///////////////////////////////////////////////////////////////////////////////// Kepsek
+Route::get('/guru/absensi-hari-ini', 'GuruController@Absensi_hari')
+->name('AbsensiHariIni')->middleware('auth:guru');
+
+//---------------------------------------------------------------------------------// Kepsek
 Route::get('/kepsek/dashboard', 'KepsekController@DashboardKepsek')
 ->name('DashboardKepsek')->middleware('auth:kepsek');
 
-///////////////////////////////////////////////////////////////////////////////// Admin Sekolah
+//---------------------------------------------------------------------------------// Admin Sekolah
 Route::get('/admin-sekolah/dashboard', 'AdminSekolahController@DashboardAdminSekolah')
 ->name('DashboardAdminSekolah')->middleware('auth:adminsekolah');
 
-///////////////////////////////////////////////////////////////////////////////// Admin Kecamatan
+//---------------------------------------------------------------------------------// Admin Kecamatan
 Route::get('/admin-kecamatan/dashboard', 'AdminKecamatanController@DashboardAdminKecamatan')
 ->name('DashboardAdminKecamatan')->middleware('auth:adminkecamatan');
 
-///////////////////////////////////////////////////////////////////////////////// Admin Dinas
+//---------------------------------------------------------------------------------// Admin Dinas
 Route::get('/admin-dinas/dashboard', 'AdminDinasController@DashboardAdminDinas')
 ->name('DashboardAdminDinas')->middleware('auth:admindinas');
 
-///////////////////////////////////////////////////////////////////////////////// Admin Master
+//---------------------------------------------------------------------------------// Admin Master
 Route::get('/admin-master/dashboard', 'AdminMasterController@DashboardAdminMaster')
 ->name('DashboardAdminMaster')->middleware('auth:adminmaster');

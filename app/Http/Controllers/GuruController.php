@@ -11,4 +11,9 @@ class GuruController extends Controller
 	{
 		return view('guru.dashboard.dashboard');
 	}
+
+	public function Absensi_hari()
+	{
+		return view('guru.absensi.hari-ini');
+	}
 }

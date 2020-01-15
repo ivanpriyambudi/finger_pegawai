@@ -13,7 +13,7 @@ use Auth;
 class LoginController extends Controller
 {
 
-  /////////////////////////////////////////////////////////// FrontEnd
+  //---------------------------------------------------------------------------------// FrontEnd
   public function LoginGuru()
   {
     return view('guru.login');
@@ -44,8 +44,8 @@ class LoginController extends Controller
     return view('admin-master.login');
   }
 
-  /////////////////////////////////////////////////////////// BackEnd
-  /////////////////////////////////////////////////// Guru
+  //---------------------------------------------------------------------------------// Backend
+  //---------------------------------------------------------------// Guru
   public function postLoginGuru(Request $request)
   {
     $this->validate($request, [
@@ -61,7 +61,7 @@ class LoginController extends Controller
     }
   }
 
-  /////////////////////////////////////////////////// Kepsek
+  //---------------------------------------------------------------// Kepsek
   public function postLoginKepsek(Request $request)
   {
     $this->validate($request, [
@@ -77,7 +77,7 @@ class LoginController extends Controller
     }
   }
 
-  /////////////////////////////////////////////////// Admin Sekolah
+  //---------------------------------------------------------------// Admin Sekolah
   public function postLoginAdminSekolah(Request $request)
   {
     $this->validate($request, [
@@ -93,7 +93,7 @@ class LoginController extends Controller
     }
   }
 
-  /////////////////////////////////////////////////// Admin Kecamatan
+  //---------------------------------------------------------------// Admin Kecamatan
   public function postLoginAdminKecamatan(Request $request)
   {
     $this->validate($request, [
@@ -109,7 +109,7 @@ class LoginController extends Controller
     }
   }
 
-  /////////////////////////////////////////////////// Admin Dinas
+  //---------------------------------------------------------------// Admin Dinas
   public function postLoginAdminDinas(Request $request)
   {
     $this->validate($request, [
@@ -125,7 +125,7 @@ class LoginController extends Controller
     }
   }
 
-  /////////////////////////////////////////////////// Admin Master
+  //---------------------------------------------------------------// Admin Master
   public function postLoginAdminMaster(Request $request)
   {
     $this->validate($request, [
@@ -142,7 +142,7 @@ class LoginController extends Controller
   }
 
 
-  ///////////////////////////////////////////////////////////////////////////////// LogOut
+  //-------------------------------------------------------------------------------------// LogOut
   public function logout()
   {
     if (Auth::guard('guru')->check()) {
