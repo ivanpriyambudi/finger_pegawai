@@ -44,12 +44,21 @@ Route::post('/LoginAdminMaster', 'LoginController@postLoginAdminMaster');
 Route::get('/siswa/dashboard', 'SiswaController@DashboardSiswa')
 ->name('DashboardSiswa')->middleware('auth:siswa');
 
-//---------------------------------------------------------------------------------// Guru
+//---------------------------------------------------------------------------------// Guru 
 Route::get('/guru/dashboard', 'GuruController@DashboardGuru')
 ->name('DashboardGuru')->middleware('auth:guru');
 
 Route::get('/guru/absensi-hari-ini', 'GuruController@Absensi_hari')
 ->name('AbsensiHariIni')->middleware('auth:guru');
+
+Route::get('/guru/absensi-rekap', 'GuruController@Absensi_rekap')
+->name('AbsensiRekap')->middleware('auth:guru');
+
+Route::get('/guru/absensi-izin', 'GuruController@Absensi_izin')
+->name('AbsensiIzin')->middleware('auth:guru');
+
+Route::get('/guru/profile', 'GuruController@Profile_guru')
+->name('ProfileGuru')->middleware('auth:guru');
 
 //---------------------------------------------------------------------------------// Wali Murid
 Route::get('/wali-murid/dashboard', 'WaliMuridController@DashboardWaliMurid')

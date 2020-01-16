@@ -16,7 +16,7 @@ class CreateWaliMuridTable extends Migration
         Schema::create('walimurid', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email',191)->unique();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

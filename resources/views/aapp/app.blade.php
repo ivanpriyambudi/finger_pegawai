@@ -9,6 +9,7 @@
 <link href="{{asset('asset/icon/icon/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
 <link href="{{asset('asset/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet">
 <link href="{{asset('asset/font-awesome-4.7.0/css/font-awesome.css')}}" rel="stylesheet">
+<link href="{{asset('asset/css/animation.css')}}" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
@@ -37,3 +38,5 @@
 </body>
 
 </html>
+
+@yield('modal')

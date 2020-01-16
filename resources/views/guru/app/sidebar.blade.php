@@ -28,13 +28,25 @@
   </a>
 </li>
 <li>
-  <a href="#!">
+  <a href="{{route('AbsensiRekap')}}" class="
+  {{ (request()->routeIs(
+
+    'AbsensiRekap'
+
+    )) ? 'mm-active' : '' }}
+    ">
     <i class="metismenu-icon pe-7s-news-paper"></i>
     Rekap Absensi
   </a>
 </li>
 <li>
-  <a href="#!">
+  <a href="{{route('AbsensiIzin')}}" class="
+  {{ (request()->routeIs(
+
+    'AbsensiIzin'
+
+    )) ? 'mm-active' : '' }}
+    ">
     <i class="metismenu-icon pe-7s-mail-open-file"></i>
     Surat Izin
   </a>
