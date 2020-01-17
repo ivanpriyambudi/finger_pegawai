@@ -60,6 +60,9 @@ Route::get('/guru/absensi-izin', 'GuruController@Absensi_izin')
 Route::get('/guru/profile', 'GuruController@Profile_guru')
 ->name('ProfileGuru')->middleware('auth:guru');
 
+Route::get('/guru/notif', 'GuruController@Profile_notif')
+->name('NotifGuru')->middleware('auth:guru');
+
 //---------------------------------------------------------------------------------// Wali Murid
 Route::get('/wali-murid/dashboard', 'WaliMuridController@DashboardWaliMurid')
 ->name('DashboardWaliMurid')->middleware('auth:walimurid');

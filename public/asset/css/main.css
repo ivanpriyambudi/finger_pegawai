@@ -42,12 +42,27 @@
   border-radius: 50% !important;
 }
 
+.img-prof2 {
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  align-content: center; 
+  margin: 50px;
+}
+
+.img-prof22{
+  border-radius: 50%; 
+  width: 250px;
+}
+
 @media only screen and (max-width: 992px) {
   /* For mobile phones: */
   .con-input {
     padding: 20px !important;
   }
 }
+
+
 
 
 

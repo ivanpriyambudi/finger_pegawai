@@ -35,11 +35,82 @@
   <div class="app-header__content">
 
     <div class="app-header-left">
-      @include('aapp.navbar-konten-left')
+      @if(Auth::guard('guru'))
+      @auth('guru')
+      @include('guru.app.navbar-konten-left')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('walimurid'))
+      @auth('walimurid')
+      @include('wali-murid.app.navbar-konten-left')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('adminsekolah'))
+      @auth('adminsekolah')
+      @include('admin-sekolah.app.navbar-konten-left')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('adminkecamatan'))
+      @auth('adminkecamatan')
+      @include('admin-kecamatan.app.navbar-konten-left')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('admindinas'))
+      @auth('admindinas')
+      @include('admin-dinas.app.navbar-konten-left')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('adminmaster'))
+      @auth('adminmaster')
+      @include('admin-master.app.navbar-konten-left')
+      @endauth 
+      @endif
+
     </div>
 
     <div class="app-header-right">
-      @include('aapp.navbar-konten-right')
+
+      @if(Auth::guard('guru'))
+      @auth('guru')
+      @include('guru.app.navbar-konten-right')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('walimurid'))
+      @auth('walimurid')
+      @include('wali-murid.app.navbar-konten-right')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('adminsekolah'))
+      @auth('adminsekolah')
+      @include('admin-sekolah.app.navbar-konten-right')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('adminkecamatan'))
+      @auth('adminkecamatan')
+      @include('admin-kecamatan.app.navbar-konten-right')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('admindinas'))
+      @auth('admindinas')
+      @include('admin-dinas.app.navbar-konten-right')
+      @endauth 
+      @endif
+
+      @if(Auth::guard('adminmaster'))
+      @auth('adminmaster')
+      @include('admin-master.app.navbar-konten-right')
+      @endauth 
+      @endif
+
     </div>
 
   </div>

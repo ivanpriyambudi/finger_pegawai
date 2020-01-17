@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>@yield('title')</title>
+	<title>@yield('title')</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
 </head>
 
 <link href="{{asset('asset/css/main.css')}}" rel="stylesheet">
@@ -17,23 +19,23 @@
 
 <body>
 
- <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+	<div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
 
-  @include('aapp.navbar')  
+		@include('aapp.navbar')  
 
-  @include('aapp.setting')        
+		@include('aapp.setting')        
 
-  @include('aapp.main')
-</div>
+		@include('aapp.main')
+	</div>
 
-<script type="text/javascript" src="{{asset('asset/js/main.js')}}"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+	<script type="text/javascript" src="{{asset('asset/js/main.js')}}"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
-@yield('js-plus')
+	@yield('js-plus')
 
 </body>
 

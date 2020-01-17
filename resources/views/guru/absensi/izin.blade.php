@@ -51,7 +51,7 @@ Dashboard Izin Absensi
 		
 		<div class="main-card mb-3 card">
 			<div class="card-body">
-				<table style="width: 100%;" id="example" class="table table-hover table-striped table-bordered">
+				<table style="width: 100%;" id="example" class="table table-hover">
 					<thead>
 						<tr>
 							<th style="width: 60px;">Tanggal</th>

@@ -44,7 +44,7 @@
 
         <ul class="nav flex-column">
           <li class="nav-item-btn text-center nav-item">
-            <button class="btn-shadow btn-wide btn-pill btn btn-focus btn-sm">Lihat Semua Notifikasi</button>
+            <a href="{{route('NotifGuru')}}" class="btn-shadow btn-wide btn-pill btn btn-focus btn-sm">Lihat Semua Notifikasi</a>
           </li>
         </ul>
       </div>
@@ -95,10 +95,6 @@
                 <ul class="nav flex-column">
                   <li class="nav-item">
                     <a href="{{route('ProfileGuru')}}" class="nav-link">Profile
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="javascript:void(0);" class="nav-link">Setting
                     </a>
                   </li>
                 </ul>

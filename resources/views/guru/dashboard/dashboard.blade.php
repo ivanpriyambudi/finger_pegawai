@@ -10,6 +10,7 @@ Dashboard
 
 {{-- ---------------------------------------------------------------------------------- page title --}}
 {{-- ---------------------------------------------------------------------- title-kiri --}}
+
 @section('page-title-icon')
 <i class="pe-7s-home icon-gradient bg-mean-fruit"></i>
 @endsection
@@ -120,7 +121,7 @@ Dashboard Absensi Guru
 					<span class="mr-2 opacity-7">
 						<i class="icon icon-anim-pulse pe-7s-look"></i>
 					</span>
-					<span class="mr-1">Lihat Detail Rekap Absensi anda</span>
+					<span class="mr-1">Lihat Detail Rekap</span>
 				</a>
 			</div>
 		</div>
@@ -204,7 +205,7 @@ Dashboard Absensi Guru
 								<div class="widget-heading">Keterangan</div>
 								<div class="widget-subheading">Pribadi</div>
 							</div>
-							<div class="widget-content-right">
+							<div class="widget-content-right text-right">
 								<h4>Menunggu Konfirmasi</h4>
 							</div>
 						</div>

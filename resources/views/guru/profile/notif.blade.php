@@ -1,7 +1,7 @@
 @extends('aapp.app')
 
 @section('title')
-Absensi | Rekap
+Notifikasi
 @endsection
 
 @section('css-plus')
@@ -11,13 +11,13 @@ Absensi | Rekap
 {{-- ---------------------------------------------------------------------------------- page title --}}
 {{-- ---------------------------------------------------------------------- title-kiri --}}
 @section('page-title-icon')
-<i class="pe-7s-news-paper icon-gradient bg-mean-fruit"></i>
+<i class="pe-7s-bell icon-gradient bg-mean-fruit"></i>
 @endsection
 @section('page-title-text')
-Absensi | Rekap
+Notifikasi
 @endsection
 @section('page-title-desk')
-Dashboard Rekap Absensi anda
+Semua Notifikasi
 @endsection
 
 {{-- ---------------------------------------------------------------------- action-kanan --}}
@@ -33,38 +33,53 @@ Dashboard Rekap Absensi anda
 		
 		<div class="main-card mb-3 card">
 			<div class="card-body">
-				<table style="width: 100%;" id="example" class="table table-hover ">
+				<table style="width: 100%;" id="example" class="table">
 					<thead>
 						<tr>
 							<th>Tanggal</th>
 							<th>Jam</th>
-							<th>Tempat</th>
-							<th style="width: 100px;">Keterangan</th>
+							<th>Notifikasi</th>
+							<th style="width: 100px;">Action</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>13/6/2020</td>
 							<td>06:00</td>
-							<td>SDN 1 Gendoh</td>
+							<td>Pengajuan Izin</td>
 							<td>
-								<div class="alert alert-success fade show text-center al-stat" role="alert">Hadir</div>
+								<a href="{{route('AbsensiIzin')}}" class="btn-shadow btn btn-primary text-light">
+									<span class="btn-icon-wrapper pr-2 opacity-7">
+										<i class="fa fa-eye fa-w-20"></i>
+									</span>
+									Lihat File
+								</a>
 							</td>
 						</tr>
 						<tr>
 							<td>13/6/2020</td>
 							<td>06:00</td>
-							<td>SDN 1 Gendoh</td>
+							<td>Pengajuan Izin</td>
 							<td>
-								<div class="alert alert-primary fade show text-center al-stat" role="alert">Pulang</div>
+								<a href="{{route('AbsensiIzin')}}" class="btn-shadow btn btn-primary text-light">
+									<span class="btn-icon-wrapper pr-2 opacity-7">
+										<i class="fa fa-eye fa-w-20"></i>
+									</span>
+									Lihat File
+								</a>
 							</td>
 						</tr>
 						<tr>
 							<td>13/6/2020</td>
 							<td>06:00</td>
-							<td>SDN 1 Gendoh</td>
+							<td>Pengajuan Izin</td>
 							<td>
-								<div class="alert alert-warning fade show text-center al-stat" role="alert">Izin</div>
+								<a href="{{route('AbsensiIzin')}}" class="btn-shadow btn btn-primary text-light">
+									<span class="btn-icon-wrapper pr-2 opacity-7">
+										<i class="fa fa-eye fa-w-20"></i>
+									</span>
+									Lihat File
+								</a>
 							</td>
 						</tr>
 					</tbody>
@@ -72,8 +87,8 @@ Dashboard Rekap Absensi anda
 						<tr>
 							<th>Tanggal</th>
 							<th>Jam</th>
-							<th>Tempat</th>
-							<th>Status</th>
+							<th>Notifikasi</th>
+							<th>Action</th>
 						</tr>
 					</tfoot>
 				</table>

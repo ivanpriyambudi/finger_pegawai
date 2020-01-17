@@ -31,4 +31,9 @@ class GuruController extends Controller
 	{
 		return view('guru.profile.profile');
 	}
+
+	public function Profile_notif()
+	{
+		return view('guru.profile.notif');
+	}
 }
