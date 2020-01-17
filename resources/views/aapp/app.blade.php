@@ -23,7 +23,7 @@
 
 		@include('aapp.navbar')  
 
-		@include('aapp.setting')        
+		{{-- @include('aapp.setting') --}}        
 
 		@include('aapp.main')
 	</div>
