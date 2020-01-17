@@ -17,7 +17,7 @@ Kepsek | Tabel Guru
 Kepsek | Tabel Guru
 @endsection
 @section('page-title-desk')
-SDN 1 Gendoh Kelas 5A
+SDN 1 Gendoh
 @endsection
 
 {{-- ---------------------------------------------------------------------- action-kanan --}}
@@ -38,6 +38,7 @@ SDN 1 Gendoh Kelas 5A
 							<th style="width: 10px;">No</th>
 							<th>Nama</th>
 							<th>NIP</th>
+							<th>Jabatan</th>
 							<th style="width: 200px;">Jenis Kelamin</th>
 						</tr>
 					</thead>
@@ -46,12 +47,14 @@ SDN 1 Gendoh Kelas 5A
 							<td>1</td>
 							<td>Ivan Priyambudi</td>
 							<td>1202170035</td>
+							<td>Guru</td>
 							<td>Laki-laki</td>
 						</tr>
 						<tr>
 							<td>2</td>
 							<td>Ivan Priyambudi</td>
 							<td>1202170035</td>
+							<td>Guru | Wali Kelas 5A</td>
 							<td>Perempuan</td>
 						</tr>
 					</tbody>
@@ -60,6 +63,7 @@ SDN 1 Gendoh Kelas 5A
 							<th>No</th>
 							<th>Nama</th>
 							<th>NIS</th>
+							<th>Jabatan</th>
 							<th>Jenis Kelamin</th>
 						</tr>
 					</tfoot>

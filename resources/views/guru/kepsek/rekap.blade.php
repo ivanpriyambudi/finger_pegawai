@@ -17,7 +17,7 @@ Kepsek | Rekap Absensi Guru
 Kepsek | Rekap Absensi Guru
 @endsection
 @section('page-title-desk')
-SDN 1 Gendoh Kelas 5A
+SDN 1 Gendoh
 @endsection
 
 {{-- ---------------------------------------------------------------------- action-kanan --}}

@@ -17,7 +17,7 @@ Kepsek | Absensi Guru Hari Ini
 Kepsek | Absensi Guru Hari Ini
 @endsection
 @section('page-title-desk')
-SDN 1 Gendoh Kelas 5A
+SDN 1 Gendoh
 @endsection
 
 {{-- ---------------------------------------------------------------------- action-kanan --}}
