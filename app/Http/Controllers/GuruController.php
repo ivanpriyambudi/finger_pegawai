@@ -36,4 +36,16 @@ class GuruController extends Controller
 	{
 		return view('guru.profile.notif');
 	}
+
+	// wali kelas
+
+	public function WaliKelas_siswa_tabel()
+	{
+		return view('guru.wali-kelas.tabel-siswa');
+	}
+
+	public function WaliKelas_siswa_hari()
+	{
+		return view('guru.wali-kelas.hariini-siswa');
+	}
 }

@@ -14,7 +14,7 @@
     Dashboard
   </a>
 </li>
-<li class="app-sidebar__heading">Absensi</li>
+<li class="app-sidebar__heading">Absensi Anda</li>
 <li>
   <a href="{{route('AbsensiHariIni')}}" class="
   {{ (request()->routeIs(
@@ -51,4 +51,30 @@
     Surat Izin
   </a>
 </li>
+<li class="app-sidebar__heading">Absensi Siswa</li>
+<li>
+  <a href="{{route('TabelSiswaGuru')}}" class="
+  {{ (request()->routeIs(
+
+    'TabelSiswaGuru'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-like"></i>
+    Tabel Siswa
+  </a>
+</li>
+<li>
+  <a href="{{route('AbsensiHariIniSiswa')}}" class="
+  {{ (request()->routeIs(
+
+    'AbsensiHariIniSiswa'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-download"></i>
+    Absensi Siswa Hari ini
+  </a>
+</li>
+
 @endsection

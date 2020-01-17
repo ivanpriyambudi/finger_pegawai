@@ -62,6 +62,12 @@ Route::get('/guru/profile', 'GuruController@Profile_guru')
 
 Route::get('/guru/notif', 'GuruController@Profile_notif')
 ->name('NotifGuru')->middleware('auth:guru');
+//--------------------------------------------------------// Wali Kelas 
+Route::get('/guru/siswa/tabel', 'GuruController@WaliKelas_siswa_tabel')
+->name('TabelSiswaGuru')->middleware('auth:guru');
+
+Route::get('/guru/siswa/absensi-hari-ini', 'GuruController@WaliKelas_siswa_hari')
+->name('AbsensiHariIniSiswa')->middleware('auth:guru');
 
 //---------------------------------------------------------------------------------// Wali Murid
 Route::get('/wali-murid/dashboard', 'WaliMuridController@DashboardWaliMurid')
