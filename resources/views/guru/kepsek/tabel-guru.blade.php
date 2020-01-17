@@ -1,7 +1,7 @@
 @extends('aapp.app')
 
 @section('title')
-Wali Kelas | Absensi Siswa Hari Ini
+Kepsek | Tabel Guru
 @endsection
 
 @section('css-plus')
@@ -11,10 +11,10 @@ Wali Kelas | Absensi Siswa Hari Ini
 {{-- ---------------------------------------------------------------------------------- page title --}}
 {{-- ---------------------------------------------------------------------- title-kiri --}}
 @section('page-title-icon')
-<i class="pe-7s-download icon-gradient bg-mean-fruit"></i>
+<i class="pe-7s-like icon-gradient bg-mean-fruit"></i>
 @endsection
 @section('page-title-text')
-Wali Kelas | Absensi Hari Ini
+Kepsek | Tabel Guru
 @endsection
 @section('page-title-desk')
 SDN 1 Gendoh Kelas 5A
@@ -29,7 +29,7 @@ SDN 1 Gendoh Kelas 5A
 
 <div class="row">
 	<div class="col-md-12 animated bounceInRight">
-		
+
 		<div class="main-card mb-3 card">
 			<div class="card-body">
 				<table style="width: 100%;" id="example" class="table table-hover">
@@ -37,42 +37,30 @@ SDN 1 Gendoh Kelas 5A
 						<tr>
 							<th style="width: 10px;">No</th>
 							<th>Nama</th>
-							<th style="width: 100px;">Tanggal</th>
-							<th style="width: 130px;">Datang</th>
-							<th style="width: 130px;">Pulang</th>
+							<th>NIP</th>
+							<th style="width: 200px;">Jenis Kelamin</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>1</td>
 							<td>Ivan Priyambudi</td>
-							<td>13/6/2020</td>
-							<td>
-								<div class="alert alert-success fade show text-center al-stat">Datang | 06:00</div>
-							</td>
-							<td>
-								<div class="alert alert-success fade show text-center al-stat">Pulang | 06:00</div>
-							</td>
+							<td>1202170035</td>
+							<td>Laki-laki</td>
 						</tr>
 						<tr>
 							<td>2</td>
 							<td>Ivan Priyambudi</td>
-							<td>13/6/2020</td>
-							<td>
-								<div class="alert alert-danger fade show text-center al-stat">Belum Datang</div>
-							</td>
-							<td>
-								<div class="alert alert-danger fade show text-center al-stat">Belum Pulang</div>
-							</td>
+							<td>1202170035</td>
+							<td>Perempuan</td>
 						</tr>
 					</tbody>
 					<tfoot>
 						<tr>
 							<th>No</th>
 							<th>Nama</th>
-							<th>Tanggal</th>
-							<th>Datang</th>
-							<th>Pulang</th>
+							<th>NIS</th>
+							<th>Jenis Kelamin</th>
 						</tr>
 					</tfoot>
 				</table>

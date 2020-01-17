@@ -14,6 +14,7 @@
     Dashboard
   </a>
 </li>
+
 <li class="app-sidebar__heading">Absensi Anda</li>
 <li>
   <a href="{{route('AbsensiHariIni')}}" class="
@@ -51,6 +52,7 @@
     Surat Izin
   </a>
 </li>
+
 <li class="app-sidebar__heading">Absensi Siswa</li>
 <li>
   <a href="{{route('TabelSiswaGuru')}}" class="
@@ -74,6 +76,56 @@
     ">
     <i class="metismenu-icon pe-7s-download"></i>
     Absensi Siswa Hari ini
+  </a>
+</li>
+<li>
+  <a href="{{route('AbsensiRekapSiswaGuru')}}" class="
+  {{ (request()->routeIs(
+
+    'AbsensiRekapSiswaGuru'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-news-paper"></i>
+    Rekap Absensi Siswa
+  </a>
+</li>
+
+<li class="app-sidebar__heading">Absensi Guru</li>
+<li>
+  <a href="{{route('TabelGuruKepsek')}}" class="
+  {{ (request()->routeIs(
+
+    'TabelGuruKepsek'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-like"></i>
+    Tabel Guru
+  </a>
+</li>
+<li>
+  <a href="{{route('AbsensiHariIniGuruKepsek')}}" class="
+  {{ (request()->routeIs(
+
+    'AbsensiHariIniGuruKepsek'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-download"></i>
+    Absensi Guru Hari ini
+  </a>
+</li>
+<li>
+  <a href="{{route('AbsensiRekapGuruKepsek')}}" class="
+  {{ (request()->routeIs(
+
+    'AbsensiRekapGuruKepsek'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-news-paper"></i>
+    Rekap Absensi Guru
   </a>
 </li>
 

@@ -1,7 +1,7 @@
 @extends('aapp.app')
 
 @section('title')
-Wali Kelas | Absensi Siswa Hari Ini
+Kepsek | Rekap Absensi Guru
 @endsection
 
 @section('css-plus')
@@ -11,10 +11,10 @@ Wali Kelas | Absensi Siswa Hari Ini
 {{-- ---------------------------------------------------------------------------------- page title --}}
 {{-- ---------------------------------------------------------------------- title-kiri --}}
 @section('page-title-icon')
-<i class="pe-7s-download icon-gradient bg-mean-fruit"></i>
+<i class="pe-7s-news-paper icon-gradient bg-mean-fruit"></i>
 @endsection
 @section('page-title-text')
-Wali Kelas | Absensi Hari Ini
+Kepsek | Rekap Absensi Guru
 @endsection
 @section('page-title-desk')
 SDN 1 Gendoh Kelas 5A
@@ -40,6 +40,7 @@ SDN 1 Gendoh Kelas 5A
 							<th style="width: 100px;">Tanggal</th>
 							<th style="width: 130px;">Datang</th>
 							<th style="width: 130px;">Pulang</th>
+							<th style="width: 130px;">Izin</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -53,6 +54,9 @@ SDN 1 Gendoh Kelas 5A
 							<td>
 								<div class="alert alert-success fade show text-center al-stat">Pulang | 06:00</div>
 							</td>
+							<td>
+								
+							</td>
 						</tr>
 						<tr>
 							<td>2</td>
@@ -64,6 +68,9 @@ SDN 1 Gendoh Kelas 5A
 							<td>
 								<div class="alert alert-danger fade show text-center al-stat">Belum Pulang</div>
 							</td>
+							<td>
+								<div class="alert alert-warning fade show text-center al-stat">Izin | Dinas Luar</div>
+							</td>
 						</tr>
 					</tbody>
 					<tfoot>
@@ -73,6 +80,7 @@ SDN 1 Gendoh Kelas 5A
 							<th>Tanggal</th>
 							<th>Datang</th>
 							<th>Pulang</th>
+							<th>Izin</th>
 						</tr>
 					</tfoot>
 				</table>

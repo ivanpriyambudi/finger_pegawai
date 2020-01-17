@@ -1,7 +1,7 @@
 @extends('aapp.app')
 
 @section('title')
-Wali Kelas | Absensi Siswa Hari Ini
+Wali Kelas | Rekap Absensi Siswa
 @endsection
 
 @section('css-plus')
@@ -11,10 +11,10 @@ Wali Kelas | Absensi Siswa Hari Ini
 {{-- ---------------------------------------------------------------------------------- page title --}}
 {{-- ---------------------------------------------------------------------- title-kiri --}}
 @section('page-title-icon')
-<i class="pe-7s-download icon-gradient bg-mean-fruit"></i>
+<i class="pe-7s-news-paper icon-gradient bg-mean-fruit"></i>
 @endsection
 @section('page-title-text')
-Wali Kelas | Absensi Hari Ini
+Wali Kelas | Rekap Absensi Siswa
 @endsection
 @section('page-title-desk')
 SDN 1 Gendoh Kelas 5A

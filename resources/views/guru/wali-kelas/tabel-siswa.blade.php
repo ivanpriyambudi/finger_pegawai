@@ -1,7 +1,7 @@
 @extends('aapp.app')
 
 @section('title')
-Siswa | Tabel Siswa
+Wali Kelas | Tabel Siswa
 @endsection
 
 @section('css-plus')
@@ -14,7 +14,7 @@ Siswa | Tabel Siswa
 <i class="pe-7s-like icon-gradient bg-mean-fruit"></i>
 @endsection
 @section('page-title-text')
-Siswa | Tabel Siswa
+Wali Kelas | Tabel Siswa
 @endsection
 @section('page-title-desk')
 SDN 1 Gendoh Kelas 5A
@@ -79,37 +79,4 @@ SDN 1 Gendoh Kelas 5A
 @endsection
 
 @section('modal')
-<div class="modal fade tolak" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Keterangan Penolakan Izin</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal fade" id="file" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">File Surat Izin</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<img src="{{asset('surat-izin/1.jpg')}}" class="img-fluid" alt="Responsive image">
-			</div>
-		</div>
-	</div>
-</div>
-
 @endsection

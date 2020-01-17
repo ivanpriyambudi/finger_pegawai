@@ -1,16 +1,19 @@
 <?php
 
+Route::get('/tes', 'GuruController@tes')
+->name('Tes')->middleware('guest');
+
 //---------------------------------------------------------------------------------// Logout
 Route::get('/logout', 'LoginController@logout');
 
 //---------------------------------------------------------------------------------// Login Siswa
 Route::get('/siswa', 'LoginController@LoginSiswa')
-->name('LoginSiswa')->middleware('guest');;
+->name('LoginSiswa')->middleware('guest');
 Route::post('/LoginSiswa', 'LoginController@postLoginSiswa');
 
 //---------------------------------------------------------------------------------// Login Guru
 Route::get('/guru', 'LoginController@LoginGuru')
-->name('LoginGuru')->middleware('guest');;
+->name('LoginGuru')->middleware('guest');
 Route::post('/LoginGuru', 'LoginController@postLoginGuru');
 
 //---------------------------------------------------------------------------------// Login Wali Murid
@@ -62,12 +65,26 @@ Route::get('/guru/profile', 'GuruController@Profile_guru')
 
 Route::get('/guru/notif', 'GuruController@Profile_notif')
 ->name('NotifGuru')->middleware('auth:guru');
+
 //--------------------------------------------------------// Wali Kelas 
 Route::get('/guru/siswa/tabel', 'GuruController@WaliKelas_siswa_tabel')
 ->name('TabelSiswaGuru')->middleware('auth:guru');
 
 Route::get('/guru/siswa/absensi-hari-ini', 'GuruController@WaliKelas_siswa_hari')
 ->name('AbsensiHariIniSiswa')->middleware('auth:guru');
+
+Route::get('/guru/siswa/absensi-rekap', 'GuruController@Walikelas_siswa_rekap')
+->name('AbsensiRekapSiswaGuru')->middleware('auth:guru');
+
+//--------------------------------------------------------// Kepsek
+Route::get('/guru/kepsek/tabel-guru', 'GuruController@Kepsek_guru_tabel')
+->name('TabelGuruKepsek')->middleware('auth:guru');
+
+Route::get('/guru/kepsek/absensi-hari-ini', 'GuruController@Kepsek_guru_hari')
+->name('AbsensiHariIniGuruKepsek')->middleware('auth:guru');
+
+Route::get('/guru/kepsek/absensi-rekap', 'GuruController@Kepsek_guru_rekap')
+->name('AbsensiRekapGuruKepsek')->middleware('auth:guru');
 
 //---------------------------------------------------------------------------------// Wali Murid
 Route::get('/wali-murid/dashboard', 'WaliMuridController@DashboardWaliMurid')

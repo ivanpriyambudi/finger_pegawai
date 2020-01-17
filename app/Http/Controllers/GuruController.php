@@ -48,4 +48,25 @@ class GuruController extends Controller
 	{
 		return view('guru.wali-kelas.hariini-siswa');
 	}
+
+	public function Walikelas_siswa_rekap()
+	{
+		return view('guru.wali-kelas.rekap');
+	}
+
+	// Kepsek
+	public function Kepsek_guru_tabel()
+	{
+		return view('guru.kepsek.tabel-guru');
+	}
+
+	public function Kepsek_guru_hari()
+	{
+		return view('guru.kepsek.hariini-guru');
+	}
+
+	public function Kepsek_guru_rekap()
+	{
+		return view('guru.kepsek.rekap');
+	}
 }
