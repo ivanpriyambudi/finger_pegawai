@@ -1,0 +1,139 @@
+﻿ul.pagination > li.previous > a.page-link {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+ul.pagination > li.next > a.page-link {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+ul.pagination > li.previous > a.page-link {
+  border: 0px !important;
+}
+
+ul.pagination > li.next > a.page-link {
+  border: 0px !important;
+}
+
+ul.pagination > li.page-item > a.page-link {
+  margin: 0 3px !important;
+  border-radius: 50%;
+  box-shadow: 0 0.125rem 0.625rem rgba(52,58,64,0.4), 0 0.0625rem 0.125rem rgba(52,58,64,0.5);
+  transition: 0.3s all;
+}
+
+
+.h-table {
+  background-color: #fafbfc !important;
+  border: 0 !important;
+  padding: 35px !important;
+}
+
+.h-body2{
+  padding-top: 0 !important;
+}
+
+.h-body {
+  padding: 0 !important;
+}
+
+.ht-table{
+  margin: 0px !important;
+  width: 100%;
+}
+
+table.ht-table > thead > tr {
+  background-color: #fafbfc !important;
+}
+
+table.ht-table > thead > tr > th {
+  border-bottom: 0.2px solid #e9ecef !important;
+  border-top: 0px !important;
+}
+
+table.ht-table > thead > tr > th:last-child {
+  border-right: 30px solid #fafbfc;
+}
+
+table.ht-table > thead > tr > th:first-child {
+  border-left: 30px solid #fafbfc;
+  width: 10px;
+}
+
+table.ht-table > tbody > tr > td:last-child {
+  border-right: 30px solid #ffff;
+}
+
+table.ht-table > tbody > tr > td:first-child {
+  border-left: 30px solid #ffff;
+}
+
+
+.no-mar {
+  margin:0 0 0 0 !important;
+}
+
+.al-stat {
+  padding: .5rem 0.01rem !important;
+  margin:0 0 0 0 !important;
+}
+
+.but-tolak {
+  cursor: pointer; 
+}
+
+.con-input {
+  padding: 0px 200px !important;
+}
+
+.img-prof {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+}
+
+.img-prof2 {
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  align-content: center; 
+  margin: 50px;
+}
+
+.img-prof22{
+  border-radius: 50%; 
+  width: 250px;
+}
+
+@media only screen and (max-width: 992px) {
+  /* For mobile phones: */
+  .con-input {
+    padding: 20px !important;
+  }
+}
+
+.dataTables_wrapper > div .btn-group {
+  position: relative;
+  display: unset !important;
+  vertical-align: middle;
+} 
+
+.dataTables_wrapper > div .btn-group > button.btn-secondary {
+  color: #3f6ad8 !important;
+  background-color: #f0f3f5 !important;
+  border-color: #6c757d00 !important;
+  width: 9em;
+  border-radius: 3px !important;
+  transition: 0.3s all;
+} 
+
+.dataTables_wrapper > div .btn-group > button.btn-secondary:hover {
+  color: #3f6ad8 !important;
+  background-color: #e1e8ec !important;
+} 
+
+.dataTables_paginate > ul .pagination > li.page-item > a.page-item {
+  margin: 0 5px !important;
+  border-radius: 50px !important;
+}

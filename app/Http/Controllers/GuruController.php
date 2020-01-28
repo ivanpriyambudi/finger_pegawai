@@ -7,6 +7,7 @@ use App\Guru;
 
 class GuruController extends Controller
 {
+	//------------------------------------------------------------- Guru
 	public function DashboardGuru()
 	{
 		return view('guru.dashboard.dashboard');
@@ -37,8 +38,7 @@ class GuruController extends Controller
 		return view('guru.profile.notif');
 	}
 
-	// wali kelas
-
+	//------------------------------------------------------------- Wali kelas
 	public function WaliKelas_siswa_tabel()
 	{
 		return view('guru.wali-kelas.tabel-siswa');
@@ -54,7 +54,7 @@ class GuruController extends Controller
 		return view('guru.wali-kelas.rekap');
 	}
 
-	// Kepsek
+	//------------------------------------------------------------- Kepsek
 	public function Kepsek_guru_tabel()
 	{
 		return view('guru.kepsek.tabel-guru');

@@ -76,7 +76,7 @@
                           <img width="42" class="rounded-circle" src="{{asset('asset/images/avatars/1.jpg')}}" alt="">
                         </div>
                         <div class="widget-content-left">
-                          <div class="widget-heading">{{Auth::guard('guru')->user()->name}}
+                          <div class="widget-heading">{{Auth::guard('adminsekolah')->user()->name}}
                           </div>
                           <div class="widget-subheading opacity-8">Guru
                           </div>

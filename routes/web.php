@@ -94,6 +94,12 @@ Route::get('/wali-murid/dashboard', 'WaliMuridController@DashboardWaliMurid')
 Route::get('/admin-sekolah/dashboard', 'AdminSekolahController@DashboardAdminSekolah')
 ->name('DashboardAdminSekolah')->middleware('auth:adminsekolah');
 
+Route::get('/admin-sekolah/tabel-guru', 'AdminSekolahController@AdminSekolah_TabelGuru')
+->name('AdminSekolahTabelGuru')->middleware('auth:adminsekolah');
+
+Route::DELETE('/admin-sekolah/tabel-guru/delete/{id}', 'AdminSekolahController@Delete_Guru')
+->name('AdminSekolahDeleteGuru')->middleware('auth:adminsekolah');
+
 //---------------------------------------------------------------------------------// Admin Kecamatan
 Route::get('/admin-kecamatan/dashboard', 'AdminKecamatanController@DashboardAdminKecamatan')
 ->name('DashboardAdminKecamatan')->middleware('auth:adminkecamatan');

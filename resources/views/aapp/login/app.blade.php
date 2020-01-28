@@ -70,7 +70,7 @@
 							<div class="divider row"></div>
 							<div>
 
-								<form action="/LoginGuru" method="POST">
+								<form action="@yield('login-to')" method="POST">
 									@csrf
 									<div class="form-row">
 										<div class="col-md-6">

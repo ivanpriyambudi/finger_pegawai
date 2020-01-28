@@ -30,45 +30,32 @@ SDN 1 Gendoh Kelas 5A
 <div class="row">
 	<div class="col-md-12 animated bounceInRight">
 
-		<div class="main-card mb-3 card">
-			<div class="card-body">
-				<table style="width: 100%;" id="example" class="table table-hover">
-					<thead>
-						<tr>
-							<th style="width: 10px;">No</th>
-							<th>Nama</th>
-							<th>NIS</th>
-							<th style="width: 200px;">Jenis Kelamin</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Ivan Priyambudi</td>
-							<td>1202170035</td>
-							<td>Laki-laki</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Ivan Priyambudi</td>
-							<td>1202170035</td>
-							<td>Perempuan</td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr>
-							<th>No</th>
-							<th>Nama</th>
-							<th>NIS</th>
-							<th>Jenis Kelamin</th>
-						</tr>
-					</tfoot>
-				</table>
-			</div>
-		</div>
+		<table style="width: 100%;" id="gg" class="table table-hover ht-table">
+			<thead>
+				<tr>
+					<th style="width: 10px;">No</th>
+					<th>Nama</th>
+					<th>NIS</th>
+					<th style="width: 200px;">Jenis Kelamin</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Ivan Priyambudi</td>
+					<td>1202170035</td>
+					<td>Laki-laki</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Ivan Priyambudi</td>
+					<td>1202170035</td>
+					<td>Perempuan</td>
+				</tr>
+			</tbody>
+		</table>
 
 	</div>
-
 </div>
 
 @endsection
@@ -76,6 +63,7 @@ SDN 1 Gendoh Kelas 5A
 
 
 @section('js-plus')
+<script src="{{asset('asset/DataTables/tabel-rekap.js')}}"></script>
 @endsection
 
 @section('modal')

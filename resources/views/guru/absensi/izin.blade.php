@@ -49,86 +49,73 @@ Dashboard Izin Absensi
 <div class="row">
 	<div id="tab" class="col-md-12 animated bounceInRight">
 		
-		<div class="main-card mb-3 card">
-			<div class="card-body">
-				<table style="width: 100%;" id="example" class="table table-hover">
-					<thead>
-						<tr>
-							<th style="width: 60px;">Tanggal</th>
-							<th style="width: 60px;">Jam</th>
-							<th>Keterangan</th>
-							<th style="width: 100px;">File</th>
-							<th style="width: 140px;">Status</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>13/6/2020</td>
-							<td>06:00</td>
-							<td>Sakit</td>
-							<td>
-								<div class="text-center">
-									<a class="btn-shadow btn btn-primary text-light" data-toggle="modal" data-target="#file">
-										<span class="btn-icon-wrapper pr-2 opacity-7">
-											<i class="fa fa-eye fa-w-20"></i>
-										</span>
-										Lihat File
-									</a>
-								</div>
-							</td>
-							<td>
-								<div class="alert alert-warning fade show text-center al-stat">Menunggu Konfirmasi</div>
-							</td>
-						</tr>
-						<tr>
-							<td>13/6/2020</td>
-							<td>06:00</td>
-							<td>Sakit</td>
-							<td>
-								<div class="text-center">
-									<a class="btn-shadow btn btn-primary text-light" data-toggle="modal" data-target="#file">
-										<span class="btn-icon-wrapper pr-2 opacity-7">
-											<i class="fa fa-eye fa-w-20"></i>
-										</span>
-										Lihat File
-									</a>
-								</div>
-							</td>
-							<td>
-								<div class="alert alert-success fade show text-center al-stat">Diterima</div>
-							</td>
-						</tr>
-						<tr>
-							<td>13/6/2020</td>
-							<td>06:00</td>
-							<td>Sakit</td>
-							<td>
-								<div class="text-center">
-									<a class="btn-shadow btn btn-primary text-light" data-toggle="modal" data-target="#file">
-										<span class="btn-icon-wrapper pr-2 opacity-7">
-											<i class="fa fa-eye fa-w-20"></i>
-										</span>
-										Lihat File
-									</a>
-								</div>
-							</td>
-							<td>
-								<div class="alert alert-danger fade show text-center al-stat but-tolak" data-toggle="modal" data-target=".tolak">Ditolak</div>
-							</td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr>
-							<th>Tanggal</th>
-							<th>Jam</th>
-							<th>Keterangan</th>
-							<th>File</th>
-							<th>Status</th>
-						</tr>
-					</tfoot>
-				</table>
-			</div>
-		</div>
+		<table id="gg" class="table table-hover ht-table">
+			<thead>
+				<tr>
+					<th style="width: 60px;">Tanggal</th>
+					<th style="width: 60px;">Jam</th>
+					<th>Keterangan</th>
+					<th style="width: 100px;">File</th>
+					<th style="width: 140px;">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>13/6/2020</td>
+					<td>06:00</td>
+					<td>Sakit</td>
+					<td>
+						<div class="text-center">
+							<a class="btn-shadow btn btn-primary text-light" data-toggle="modal" data-target="#file">
+								<span class="btn-icon-wrapper pr-2 opacity-7">
+									<i class="fa fa-eye fa-w-20"></i>
+								</span>
+								Lihat File
+							</a>
+						</div>
+					</td>
+					<td>
+						<div class="alert alert-warning fade show text-center al-stat">Menunggu Konfirmasi</div>
+					</td>
+				</tr>
+				<tr>
+					<td>13/6/2020</td>
+					<td>06:00</td>
+					<td>Sakit</td>
+					<td>
+						<div class="text-center">
+							<a class="btn-shadow btn btn-primary text-light" data-toggle="modal" data-target="#file">
+								<span class="btn-icon-wrapper pr-2 opacity-7">
+									<i class="fa fa-eye fa-w-20"></i>
+								</span>
+								Lihat File
+							</a>
+						</div>
+					</td>
+					<td>
+						<div class="alert alert-success fade show text-center al-stat">Diterima</div>
+					</td>
+				</tr>
+				<tr>
+					<td>13/6/2020</td>
+					<td>06:00</td>
+					<td>Sakit</td>
+					<td>
+						<div class="text-center">
+							<a class="btn-shadow btn btn-primary text-light" data-toggle="modal" data-target="#file">
+								<span class="btn-icon-wrapper pr-2 opacity-7">
+									<i class="fa fa-eye fa-w-20"></i>
+								</span>
+								Lihat File
+							</a>
+						</div>
+					</td>
+					<td>
+						<div class="alert alert-danger fade show text-center al-stat but-tolak" data-toggle="modal" data-target=".tolak">Ditolak</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
 	</div>
 
@@ -181,6 +168,7 @@ Dashboard Izin Absensi
 
 
 @section('js-plus')
+<script src="{{asset('asset/DataTables/tabel-biasa.js')}}"></script>
 <script type="text/javascript">
 
 	function myDetail() {

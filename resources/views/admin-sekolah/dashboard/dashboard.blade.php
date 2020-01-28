@@ -16,7 +16,7 @@ Dashboard
 Dashboard
 @endsection
 @section('page-title-desk')
-Dashboard Absensi Kepsek
+Dashboard Admin Sekolah
 @endsection
 
 {{-- //////////////////////////////////////////////////////////////// action --}}

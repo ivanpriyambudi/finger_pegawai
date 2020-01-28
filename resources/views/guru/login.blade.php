@@ -7,3 +7,7 @@ Login | Guru
 @section('title-page')
 Login <b>Guru</b>
 @endsection
+
+@section('login-to')
+/LoginGuru
+@endsection
