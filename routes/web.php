@@ -97,7 +97,7 @@ Route::get('/admin-sekolah/dashboard', 'AdminSekolahController@DashboardAdminSek
 Route::get('/admin-sekolah/tabel-guru', 'AdminSekolahController@AdminSekolah_TabelGuru')
 ->name('AdminSekolahTabelGuru')->middleware('auth:adminsekolah');
 
-Route::DELETE('/admin-sekolah/tabel-guru/delete/{id}', 'AdminSekolahController@Delete_Guru')
+Route::post('/admin-sekolah/tabel-guru/delete/{id}', 'AdminSekolahController@Delete_Guru')
 ->name('AdminSekolahDeleteGuru')->middleware('auth:adminsekolah');
 
 //---------------------------------------------------------------------------------// Admin Kecamatan

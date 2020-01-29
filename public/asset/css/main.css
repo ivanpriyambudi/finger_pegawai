@@ -7243,7 +7243,6 @@ a.close.disabled {
     align-items: flex-start;
     justify-content: space-between;
     padding: 1rem 1rem;
-    border-bottom: 1px solid #e9ecef;
     border-top-left-radius: .3rem;
     border-top-right-radius: .3rem
 }
@@ -18517,7 +18516,7 @@ a.avatar-icon-wrapper:hover .avatar-icon {
 
 .modal-header,
 .modal-footer {
-    background: #f8f9fa
+    background: #fff
 }
 
 .modal-footer {

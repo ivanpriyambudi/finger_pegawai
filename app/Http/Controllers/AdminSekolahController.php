@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use App\AdminSekolah;
 use App\Guru;
 use Auth;
-
 
 class AdminSekolahController extends Controller
 {
@@ -24,9 +24,10 @@ class AdminSekolahController extends Controller
 
 	public function Delete_Guru($id)
 	{
+		
 		$model=Guru::find($id);
 		$model->delete();
-
-		return redirect()->route('AdminSekolahTabelGuru');
+		
+		Alert::success('Success Title', 'Success Message');
 	}
 }

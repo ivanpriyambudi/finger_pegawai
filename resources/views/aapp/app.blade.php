@@ -43,10 +43,12 @@
 	<script src="{{asset('asset/DataTables/vfs_fonts.js')}}"></script>
 	<script src="{{asset('asset/DataTables/button.js')}}"></script>
 	<script src="{{asset('asset/DataTables/jzip.js')}}"></script>
-
+	@include('sweetalert::alert')
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 	
 	@yield('js-plus')
+	
+	@include('aapp.swal')
 
 </body>
 

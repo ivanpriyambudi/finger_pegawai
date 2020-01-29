@@ -48,44 +48,49 @@ Data diri anda
 <div class="row">
 	<div id="tab" class="col-md-12 animated bounceInRight">
 		<div class="main-card mb-3 card">
-			<div class="grid-menu grid-menu-2col">
-				<div class="no-gutters row">
 
-					<div class="col-sm-4">
-						<div class="img-prof2">
-							<img class="img-prof22" src="{{asset('asset/images/avatars/1.jpg')}}" alt="">
-						</div>
+			<div class="row" style="padding: 2.5em">
+				<div class="col-md-4">
+					<div class="text-center">
+						<img class="foto-profil2" src="{{asset('asset/images/avatars/foto.jpg')}}" alt="">
 					</div>
-
-					<div class="col-sm-8">
-						<div class="widget-chart text-left">
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">
-									<h6 class="list-group-item-heading"><b>Nama</b></h6>
-									<p class="list-group-item-text no-mar">Ivan Priyambudi</p>
-								</li>
-								<li class="list-group-item">
-									<h6 class="list-group-item-heading"><b>NIP</b></h6>
-									<p class="list-group-item-text no-mar">1202170035</p>
-								</li>
-								<li class="list-group-item">
-									<h6 class="list-group-item-heading"><b>Tempat Dinas</b></h6>
-									<p class="list-group-item-text no-mar">SDN 1 Gendoh</p>
-								</li>
-								<li class="list-group-item">
-									<h6 class="list-group-item-heading"><b>Jabatan</b></h6>
-									<p class="list-group-item-text no-mar">Guru</p>
-								</li>
-								<li class="list-group-item">
-									<h6 class="list-group-item-heading"><b>Password</b></h6>
-									<p class="list-group-item-text no-mar">Guru</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-
+				</div>
+				<div class="col-md-8">
+					<ul class="list-group">
+						<li class="list-group-item">
+							<table class="table">
+								<tbody>
+									<tr>
+										<th>Nama</th>
+										<td>Ivan Priyambudi</td>
+									</tr>
+									<tr>
+										<th>NIP</th>
+										<td>1202170035</td>
+									</tr>
+									<tr>
+										<th>Tempat Dinas</th>
+										<td>SDN 1 Gendoh</td>
+									</tr>
+									<tr>
+										<th>Jabatan</th>
+										<td>Guru</td>
+									</tr>
+									<tr>
+										<th>Mata Pelajaran</th>
+										<td>IPA</td>
+									</tr>
+									<tr>
+										<th>Password</th>
+										<td>Guru</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+					</ul>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
