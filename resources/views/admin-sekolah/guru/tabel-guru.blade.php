@@ -23,18 +23,18 @@ SDN 1 Gendoh
 {{-- ---------------------------------------------------------------------- action-kanan --}}
 @section('page-title-action')
 <div id="tab2">
-	<a onclick="myDetail()" class="btn-shadow btn btn-info text-light">
-		<span class="btn-icon-wrapper pr-2 opacity-7">
-			<i class="fa fa-plus fa-w-20"></i>
+	<a onclick="myDetail()" class="btn-shadow btn btn-info text-white">
+		<span class="btn-icon-wrapper pr-2">
+			<i class="fa fa-plus fa-w-20 tex"></i>
 		</span>
 		Tambah Guru
 	</a>
 </div>
 
 <div id="detail2" style="display: none;">
-	<a onclick="myClose()" class="btn-shadow btn btn-info text-light">
-		<span class="btn-icon-wrapper pr-2 opacity-7">
-			<i class="fa fa-arrow-left fa-w-20"></i>
+	<a onclick="myClose()" class="btn-shadow btn btn-info text-white">
+		<span class="btn-icon-wrapper pr-2">
+			<i class="fa fa-arrow-left fa-w-20 tex"></i>
 		</span>
 		Kembali ke Tabel
 	</a>
@@ -67,8 +67,8 @@ SDN 1 Gendoh
 					<td>Guru</td>
 					<td>IPA</td>
 					<td>
-						<a href="#!" class="aktif btn-shadow btn btn-danger text-light">
-							<span class="btn-icon-wrapper pr-2 opacity-7">
+						<a href="#!" class="aktif btn-shadow btn btn-danger text-white">
+							<span class="btn-icon-wrapper pr-2">
 								<i class="fa fa-eye fa-w-20" aria-hidden="true"></i>
 							</span>
 							Non Aktif
@@ -95,8 +95,8 @@ SDN 1 Gendoh
 					<td>Wali Kelas 5B</td>
 					<td>IPS</td>
 					<td>
-						<a href="#!" class="btn-shadow btn btn-success text-light">
-							<span class="btn-icon-wrapper pr-2 opacity-7">
+						<a href="#!" class="btn-shadow btn btn-success text-white">
+							<span class="btn-icon-wrapper pr-2">
 								<i class="fa fa-eye fa-w-20" aria-hidden="true"></i>
 							</span>
 							Aktif
@@ -123,8 +123,8 @@ SDN 1 Gendoh
 					<td>Kepsek</td>
 					<td>IPA</td>
 					<td>
-						<a href="#!" class="nonaktif btn-shadow btn btn-success text-light">
-							<span class="btn-icon-wrapper pr-2 opacity-7">
+						<a href="#!" class="nonaktif btn-shadow btn btn-success text-white">
+							<span class="btn-icon-wrapper pr-2">
 								<i class="fa fa-eye fa-w-20" aria-hidden="true"></i>
 							</span>
 							Aktif
@@ -135,7 +135,7 @@ SDN 1 Gendoh
 							<button  type="button" class="btn-icon btn-icon-only btn-shadow btn btn-primary text-white" data-toggle="modal" data-target="#exampleModal">
 								<i class="fa fa-eye btn-icon-wrapper"></i>
 							</button>
-							<a  href="#!" class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white">
+							<a class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white" data-toggle="modal" data-target=".bd-example-modal-lg">
 								<i class="fa fa-edit btn-icon-wrapper"></i>
 							</a>
 							<a href="#!" class="first btn-icon btn-icon-only btn-shadow btn btn-danger text-white"{{-- title="{{$gur->name}}" --}}>
@@ -149,36 +149,82 @@ SDN 1 Gendoh
 
 	</div>
 
-	<div id="detail" class="col-md-12 animated bounceInRight con-input" style="display: none" >
+	<div id="detail" class="col-md-12 animated bounceInRight" style="display: none" >
 		<div class="main-card mb-3 card">
 			<div class="card-body">
 
-				<form class="col-md-10 mx-auto" method="POST" action="">
-					@csrf
+				<form class="col-md-12 mx-auto" method="POST" action="">
 					<h1 class="card-title">Tambah Guru</h1>
 					<hr>
 
-					<div class="form-group">
-						<label for="nama" class="">Nama</label>
-						<input name="nama" id="exampleEmail" placeholder="with a placeholder" type="email" class="form-control">
-					</div>
+					<div class="form-row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="NamaGuru" class="">Nama</label>
+								<input name="nama" id="NamaGuru" placeholder="Nama Guru" type="text" class="form-control">
+							</div>
 
-					<div class="form-group">
-						<label for="keterangan">Keterangan</label>
-						<select class="multiselect-dropdown form-control" id="keterangan" name="keterangan">
-							<option></option>
-							<option value="dinas luar">Dinas luar</option>
-							<option value="pribadi">Pribadi</option>
-							<option value="bimbingan">Bimbingan</option>
-						</select>
-					</div>
+							<div class="form-group">
+								<label for="NIPGuru" class="">NIP</label>
+								<input name="nip" id="NIPGuru" placeholder="NIP Guru" type="number" class="form-control">
+							</div>
 
-					<div class="form-group">
-						<label for="suratizin" class="">File Surat Izin</label>
-						<input name="suratizin" id="suratizin" type="file" class="form-control-file">
-						<small class="form-text text-muted">
-							Uplaod <b>File Surat Izin</b> anda dalam bentuk <b>.Jpg</b> atau <b>Gambar</b>
-						</small>
+							<div class="form-group">
+								<label for="Password" class="">Password</label>
+								<input name="password" id="Password" placeholder="Password" type="password" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<label for="JenisKelamin">Jenis Kelamin</label>
+								<select class="multiselect-dropdown form-control" id="JenisKelamin" name="jeniskelamin">
+									<option></option>
+									<option value="Laki-laki">Laki-laki</option>
+									<option value="Perempuan">Perempuan</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="fotoprofile" class="">Foto Profil</label>
+								<input name="fotoprofile" id="fotoprofile" type="file" class="form-control-file">
+								<small class="form-text text-muted">
+									Uplaod <b>Foto Profil</b> anda dalam bentuk <b>.Jpg</b> atau <b>Gambar</b>
+								</small>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="pelajaran">Mata Pelakaran</label>
+								<select class="multiselect-dropdown form-control" id="pelajaran" name="pelajaran">
+									<option></option>
+									<option value="IPA">IPA</option>
+									<option value="IPS">IPS</option>
+									<option value="Penjaskes">Penjaskes</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="Jabatan">Jabatan</label>
+								<select class="multiselect-dropdown form-control" id="Jabatan" name="jabatan">
+									<option></option>
+									<option value="Guru">Guru</option>
+									<option value="Wali Kelas">Wali Kelas</option>
+									<option value="Kepsek">Kepsek</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="Kelas">Kelas</label>
+								<select class="multiselect-dropdown form-control" id="Kelas" name="kelas">
+									<option></option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select>
+							</div>
+						</div>
 					</div>
 
 					<br>
@@ -186,6 +232,7 @@ SDN 1 Gendoh
 						<button type="submit" class="mb-2 mr-2 btn btn-shadow btn-primary btn-lg btn-block">Submit</button>
 					</div>
 				</form>
+
 			</div>
 		</div>
 	</div>
@@ -289,6 +336,99 @@ SDN 1 Gendoh
 					</li>
 				</ul>
 
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body2">
+				<form class="col-md-12 mx-auto" method="POST" action="">
+					<h1 class="card-title">Edit Guru</h1>
+					<hr>
+
+					<div class="form-row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="NamaGuru" class="">Nama</label>
+								<input name="nama" id="NamaGuru" placeholder="Nama Guru" type="text" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<label for="NIPGuru" class="">NIP</label>
+								<input name="nip" id="NIPGuru" placeholder="NIP Guru" type="number" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<label for="Password" class="">Password</label>
+								<input name="password" id="Password" placeholder="Password" type="password" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<label for="JenisKelamin">Jenis Kelamin</label>
+								<select class="multiselect-dropdown form-control" id="JenisKelamin" name="jeniskelamin">
+									<option></option>
+									<option value="Laki-laki">Laki-laki</option>
+									<option value="Perempuan">Perempuan</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="fotoprofile" class="">Foto Profil</label>
+								<input name="fotoprofile" id="fotoprofile" type="file" class="form-control-file">
+								<small class="form-text text-muted">
+									Uplaod <b>Foto Profil</b> anda dalam bentuk <b>.Jpg</b> atau <b>Gambar</b>
+								</small>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="pelajaran">Mata Pelakaran</label>
+								<select class="multiselect-dropdown form-control" id="pelajaran" name="pelajaran">
+									<option></option>
+									<option value="IPA">IPA</option>
+									<option value="IPS">IPS</option>
+									<option value="Penjaskes">Penjaskes</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="Jabatan">Jabatan</label>
+								<select class="multiselect-dropdown form-control" id="Jabatan" name="jabatan">
+									<option></option>
+									<option value="Guru">Guru</option>
+									<option value="Wali Kelas">Wali Kelas</option>
+									<option value="Kepsek">Kepsek</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="Kelas">Kelas</label>
+								<select class="multiselect-dropdown form-control" id="Kelas" name="kelas">
+									<option></option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<br>
+					<div class="form-group">
+						<button type="submit" class="mb-2 mr-2 btn btn-shadow btn-primary btn-lg btn-block">Simpan</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
