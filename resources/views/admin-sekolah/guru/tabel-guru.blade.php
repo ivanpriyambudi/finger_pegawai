@@ -76,10 +76,10 @@ SDN 1 Gendoh
 					</td>
 					<td>
 						<div class="text-center">
-							<a  href="#!" class="btn-icon btn-icon-only btn-shadow btn btn-primary text-white">
+							<a class="btn-icon btn-icon-only btn-shadow btn btn-primary text-white" data-toggle="modal" data-target="#ModalDetail">
 								<i class="fa fa-eye btn-icon-wrapper"></i>
 							</a>
-							<a  href="#!" class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white">
+							<a class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white" data-toggle="modal" data-target="#ModalEdit">
 								<i class="fa fa-edit btn-icon-wrapper"></i>
 							</a>
 							<a href="#!" class="first btn-icon btn-icon-only btn-shadow btn btn-danger text-white">
@@ -95,7 +95,7 @@ SDN 1 Gendoh
 					<td>Wali Kelas 5B</td>
 					<td>IPS</td>
 					<td>
-						<a href="#!" class="btn-shadow btn btn-success text-white">
+						<a href="#!" class="nonaktif btn-shadow btn btn-success text-white">
 							<span class="btn-icon-wrapper pr-2">
 								<i class="fa fa-eye fa-w-20" aria-hidden="true"></i>
 							</span>
@@ -104,10 +104,10 @@ SDN 1 Gendoh
 					</td>
 					<td>
 						<div class="text-center">
-							<a  href="#!" class="btn-icon btn-icon-only btn-shadow btn btn-primary text-white">
+							<a class="btn-icon btn-icon-only btn-shadow btn btn-primary text-white" data-toggle="modal" data-target="#ModalDetail">
 								<i class="fa fa-eye btn-icon-wrapper"></i>
 							</a>
-							<a  href="#!" class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white">
+							<a class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white" data-toggle="modal" data-target="#ModalEdit">
 								<i class="fa fa-edit btn-icon-wrapper"></i>
 							</a>
 							<a href="#!" class="first btn-icon btn-icon-only btn-shadow btn btn-danger text-white"{{-- title="{{$gur->name}}" --}}>
@@ -132,10 +132,10 @@ SDN 1 Gendoh
 					</td>
 					<td>
 						<div class="text-center">
-							<button  type="button" class="btn-icon btn-icon-only btn-shadow btn btn-primary text-white" data-toggle="modal" data-target="#exampleModal">
+							<a class="btn-icon btn-icon-only btn-shadow btn btn-primary text-white" data-toggle="modal" data-target="#ModalDetail">
 								<i class="fa fa-eye btn-icon-wrapper"></i>
-							</button>
-							<a class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white" data-toggle="modal" data-target=".bd-example-modal-lg">
+							</a>
+							<a class="btn-icon btn-icon-only btn-shadow btn btn-warning text-white" data-toggle="modal" data-target="#ModalEdit">
 								<i class="fa fa-edit btn-icon-wrapper"></i>
 							</a>
 							<a href="#!" class="first btn-icon btn-icon-only btn-shadow btn btn-danger text-white"{{-- title="{{$gur->name}}" --}}>
@@ -154,7 +154,7 @@ SDN 1 Gendoh
 			<div class="card-body">
 
 				<form class="col-md-12 mx-auto" method="POST" action="">
-					<h1 class="card-title">Tambah Guru</h1>
+					<h1 class="card-title">Tambah Guru Baru</h1>
 					<hr>
 
 					<div class="form-row">
@@ -286,7 +286,7 @@ SDN 1 Gendoh
 
 @section('modal')
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalDetail">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -341,7 +341,7 @@ SDN 1 Gendoh
 	</div>
 </div>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="ModalEdit">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
