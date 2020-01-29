@@ -94,11 +94,26 @@ Route::get('/wali-murid/dashboard', 'WaliMuridController@DashboardWaliMurid')
 Route::get('/admin-sekolah/dashboard', 'AdminSekolahController@DashboardAdminSekolah')
 ->name('DashboardAdminSekolah')->middleware('auth:adminsekolah');
 
-Route::get('/admin-sekolah/tabel-guru', 'AdminSekolahController@AdminSekolah_TabelGuru')
+Route::get('/admin-sekolah/guru/tabel-guru', 'AdminSekolahController@AdminSekolah_TabelGuru')
 ->name('AdminSekolahTabelGuru')->middleware('auth:adminsekolah');
 
-Route::post('/admin-sekolah/tabel-guru/delete/{id}', 'AdminSekolahController@Delete_Guru')
-->name('AdminSekolahDeleteGuru')->middleware('auth:adminsekolah');
+Route::get('/admin-sekolah/guru/absensi-hari-ini', 'AdminSekolahController@AdminSekolah_GuruHariIni')
+->name('AdminSekolahHariIniGuru')->middleware('auth:adminsekolah');
+
+Route::get('/admin-sekolah/guru/absensi-rekap', 'AdminSekolahController@AdminSekolah_RekapGuru')
+->name('AdminSekolahRekapGuru')->middleware('auth:adminsekolah');
+
+Route::get('/admin-sekolah/siswa/tabel-siswa', 'AdminSekolahController@AdminSekolah_TabelSiswa')
+->name('AdminSekolahTabelSiswa')->middleware('auth:adminsekolah');
+
+Route::get('/admin-sekolah/siswa/hari-ini', 'AdminSekolahController@AdminSekolah_SiswaHariIni')
+->name('AdminSekolahHariIniSiswa')->middleware('auth:adminsekolah');
+
+Route::get('/admin-sekolah/siswa/rekap', 'AdminSekolahController@AdminSekolah_RekapSiswa')
+->name('AdminSekolahRekapSiswa')->middleware('auth:adminsekolah');
+
+// Route::post('/admin-sekolah/tabel-guru/delete/{id}', 'AdminSekolahController@Delete_Guru')
+// ->name('AdminSekolahDeleteGuru')->middleware('auth:adminsekolah');
 
 //---------------------------------------------------------------------------------// Admin Kecamatan
 Route::get('/admin-kecamatan/dashboard', 'AdminKecamatanController@DashboardAdminKecamatan')

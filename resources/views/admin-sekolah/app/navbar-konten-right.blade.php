@@ -94,10 +94,6 @@
               <div class="scrollbar-container ps">
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a href="{{route('ProfileGuru')}}" class="nav-link">Profile
-                    </a>
-                  </li>
-                  <li class="nav-item">
                     <a href="javascript:void(0);" class="nav-link">Setting
                     </a>
                   </li>

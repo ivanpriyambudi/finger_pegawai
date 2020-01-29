@@ -29,20 +29,39 @@
   </a>
 </li>
 
-<li>
+<li class="
+{{ (request()->routeIs(
+
+  'AdminSekolahRekapGuru',
+  'AdminSekolahHariIniGuru'
+
+  )) ? 'mm-active' : '' }}
+  ">
   <a href="#">
     <i class="metismenu-icon pe-7s-news-paper"></i>Absensi Guru
     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
   </a>
   <ul>
     <li>
-      <a href="#!">
+      <a href="{{route('AdminSekolahHariIniGuru')}}" class="
+      {{ (request()->routeIs(
+
+        'AdminSekolahHariIniGuru'
+
+        )) ? 'mm-active' : '' }}
+        ">
         <i class="metismenu-icon"></i>
         Absensi Hari Ini
       </a>
     </li>
     <li>
-      <a href="#!">
+      <a href="{{route('AdminSekolahRekapGuru')}}" class="
+      {{ (request()->routeIs(
+
+        'AdminSekolahRekapGuru'
+
+        )) ? 'mm-active' : '' }}
+        ">
         <i class="metismenu-icon"></i>
         Rekap Absensi
       </a>
@@ -52,10 +71,10 @@
 
 <li class="app-sidebar__heading">Siswa</li>
 <li>
-  <a href="{{route('TabelSiswaGuru')}}" class="
+  <a href="{{route('AdminSekolahTabelSiswa')}}" class="
   {{ (request()->routeIs(
 
-    'TabelSiswaGuru'
+    'AdminSekolahTabelSiswa'
 
     )) ? 'mm-active' : '' }}
     ">
@@ -64,20 +83,39 @@
   </a>
 </li>
 
-<li>
+<li class="
+{{ (request()->routeIs(
+
+  'AdminSekolahHariIniSiswa',
+  'AdminSekolahRekapSiswa'
+
+  )) ? 'mm-active' : '' }}
+  ">
   <a href="#">
     <i class="metismenu-icon pe-7s-news-paper"></i>Absensi Siswa
     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
   </a>
   <ul>
     <li>
-      <a href="#!">
+      <a href="{{route('AdminSekolahHariIniSiswa')}}" class="
+      {{ (request()->routeIs(
+
+        'AdminSekolahHariIniSiswa'
+
+        )) ? 'mm-active' : '' }}
+        ">
         <i class="metismenu-icon"></i>
         Absensi Hari Ini
       </a>
     </li>
     <li>
-      <a href="#!">
+      <a href="{{route('AdminSekolahRekapSiswa')}}" class="
+      {{ (request()->routeIs(
+
+        'AdminSekolahRekapSiswa'
+
+        )) ? 'mm-active' : '' }}
+        ">
         <i class="metismenu-icon"></i>
         Rekap Absensi
       </a>

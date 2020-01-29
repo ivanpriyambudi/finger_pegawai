@@ -22,12 +22,37 @@ class AdminSekolahController extends Controller
 		return view('admin-sekolah.guru.tabel-guru',compact('guru'));
 	}
 
-	public function Delete_Guru($id)
+	public function AdminSekolah_GuruHariIni()
 	{
-		
-		$model=Guru::find($id);
-		$model->delete();
-		
-		Alert::success('Success Title', 'Success Message');
+		return view('admin-sekolah.guru.hari-ini');
 	}
+
+	public function AdminSekolah_RekapGuru()
+	{
+		return view('admin-sekolah.guru.rekap');
+	}
+
+	public function AdminSekolah_TabelSiswa()
+	{
+		return view('admin-sekolah.siswa.tabel-siswa');
+	}
+
+	public function AdminSekolah_SiswaHariIni()
+	{
+		return view('admin-sekolah.siswa.hari-ini');
+	}
+
+	public function AdminSekolah_RekapSiswa()
+	{
+		return view('admin-sekolah.siswa.rekap');
+	}
+
+	// public function Delete_Guru($id)
+	// {
+
+	// 	$model=Guru::find($id);
+	// 	$model->delete();
+
+	// 	Alert::success('Success Title', 'Success Message');
+	// }
 }

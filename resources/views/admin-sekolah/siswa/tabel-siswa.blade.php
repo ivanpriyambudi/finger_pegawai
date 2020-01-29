@@ -1,7 +1,7 @@
 @extends('aapp.app')
 
 @section('title')
-Admin Sekolah | Tabel Guru
+Admin Sekolah | Tabel Siswa
 @endsection
 
 @section('css-plus')
@@ -14,7 +14,7 @@ Admin Sekolah | Tabel Guru
 <i class="pe-7s-like icon-gradient bg-mean-fruit"></i>
 @endsection
 @section('page-title-text')
-Admin Sekolah | Tabel Guru
+Admin Sekolah | Tabel Siswa
 @endsection
 @section('page-title-desk')
 SDN 1 Gendoh
@@ -27,7 +27,7 @@ SDN 1 Gendoh
 		<span class="btn-icon-wrapper pr-2">
 			<i class="fa fa-plus fa-w-20 tex"></i>
 		</span>
-		Tambah Guru Baru
+		Tambah Siswa Baru
 	</a>
 </div>
 
@@ -52,9 +52,9 @@ SDN 1 Gendoh
 				<tr>
 					<th style="width: 10px;">No</th>
 					<th>Nama</th>
-					<th>NIP</th>
-					<th>Jabatan</th>
-					<th>Mata Pelajaran</th>
+					<th>NIS</th>
+					<th>Kelas</th>
+					<th>JK</th>
 					<th>Status</th>
 					<th>Action</th>
 				</tr>
@@ -64,8 +64,8 @@ SDN 1 Gendoh
 					<td>1</td>
 					<td>Ivan Priyambudi</td>
 					<td>1202170035</td>
-					<td>Guru</td>
-					<td>IPA</td>
+					<td>5A</td>
+					<td>L</td>
 					<td>
 						<a href="#!" class="aktif btn-shadow btn btn-danger text-white">
 							<span class="btn-icon-wrapper pr-2">
@@ -92,8 +92,8 @@ SDN 1 Gendoh
 					<td>1</td>
 					<td>Ivan Priyambudi</td>
 					<td>1202170035</td>
-					<td>Wali Kelas 5B</td>
-					<td>IPS</td>
+					<td>5A</td>
+					<td>L</td>
 					<td>
 						<a href="#!" class="nonaktif btn-shadow btn btn-success text-white">
 							<span class="btn-icon-wrapper pr-2">
@@ -120,8 +120,8 @@ SDN 1 Gendoh
 					<td>1</td>
 					<td>Ivan Priyambudi</td>
 					<td>1202170035</td>
-					<td>Kepsek</td>
-					<td>IPA</td>
+					<td>5A</td>
+					<td>L</td>
 					<td>
 						<a href="#!" class="nonaktif btn-shadow btn btn-success text-white">
 							<span class="btn-icon-wrapper pr-2">
@@ -154,7 +154,7 @@ SDN 1 Gendoh
 			<div class="card-body">
 
 				<form class="col-md-12 mx-auto" method="POST" action="">
-					<h1 class="card-title">Tambah Guru Baru</h1>
+					<h1 class="card-title">Tambah Siswa Baru</h1>
 					<hr>
 
 					<div class="form-row">
@@ -165,13 +165,8 @@ SDN 1 Gendoh
 							</div>
 
 							<div class="form-group">
-								<label for="NIPGuru" class="">NIP</label>
-								<input name="nip" id="NIPGuru" placeholder="NIP Guru" type="number" class="form-control">
-							</div>
-
-							<div class="form-group">
-								<label for="Password" class="">Password</label>
-								<input name="password" id="Password" placeholder="Password" type="password" class="form-control">
+								<label for="NISSiswa" class="">NIS</label>
+								<input name="nis" id="NISSiswa" placeholder="NIS Guru" type="number" class="form-control">
 							</div>
 
 							<div class="form-group">
@@ -193,23 +188,8 @@ SDN 1 Gendoh
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="pelajaran">Mata Pelakaran</label>
-								<select class="multiselect-dropdown form-control" id="pelajaran" name="pelajaran">
-									<option></option>
-									<option value="IPA">IPA</option>
-									<option value="IPS">IPS</option>
-									<option value="Penjaskes">Penjaskes</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<label for="Jabatan">Jabatan</label>
-								<select class="multiselect-dropdown form-control" id="Jabatan" name="jabatan">
-									<option></option>
-									<option value="Guru">Guru</option>
-									<option value="Wali Kelas">Wali Kelas</option>
-									<option value="Kepsek">Kepsek</option>
-								</select>
+								<label for="Password" class="">Password</label>
+								<input name="password" id="Password" placeholder="Password" type="password" class="form-control">
 							</div>
 
 							<div class="form-group">
@@ -224,12 +204,13 @@ SDN 1 Gendoh
 									<option value="6">6</option>
 								</select>
 							</div>
+
 						</div>
 					</div>
 
 					<br>
 					<div class="form-group">
-						<button type="submit" class="mb-2 mr-2 btn btn-shadow btn-primary btn-lg btn-block">Submit</button>
+						<button type="submit" class="mb-2 mr-2 btn btn-shadow btn-primary btn-lg btn-block">Simpan</button>
 					</div>
 				</form>
 
@@ -311,20 +292,20 @@ SDN 1 Gendoh
 										<td>Ivan Priyambudi</td>
 									</tr>
 									<tr>
-										<th>NIP</th>
+										<th>NIS</th>
 										<td>1202170035</td>
 									</tr>
 									<tr>
-										<th>Tempat Dinas</th>
+										<th>Sekolah</th>
 										<td>SDN 1 Gendoh</td>
 									</tr>
 									<tr>
-										<th>Jabatan</th>
-										<td>Guru</td>
+										<th>Kelas</th>
+										<td>5A</td>
 									</tr>
 									<tr>
-										<th>Mata Pelajaran</th>
-										<td>IPA</td>
+										<th>Jenis Kelamin</th>
+										<td>L</td>
 									</tr>
 									<tr>
 										<th>Password</th>
@@ -351,7 +332,7 @@ SDN 1 Gendoh
 			</div>
 			<div class="modal-body2">
 				<form class="col-md-12 mx-auto" method="POST" action="">
-					<h1 class="card-title">Edit Guru</h1>
+					<h1 class="card-title">Edit Siswa</h1>
 					<hr>
 
 					<div class="form-row">
@@ -362,13 +343,8 @@ SDN 1 Gendoh
 							</div>
 
 							<div class="form-group">
-								<label for="NIPGuru" class="">NIP</label>
-								<input name="nip" id="NIPGuru" placeholder="NIP Guru" type="number" class="form-control">
-							</div>
-
-							<div class="form-group">
-								<label for="Password" class="">Password</label>
-								<input name="password" id="Password" placeholder="Password" type="password" class="form-control">
+								<label for="NISSiswa" class="">NIS</label>
+								<input name="nis" id="NISSiswa" placeholder="NIS Guru" type="number" class="form-control">
 							</div>
 
 							<div class="form-group">
@@ -390,23 +366,8 @@ SDN 1 Gendoh
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="pelajaran">Mata Pelakaran</label>
-								<select class="multiselect-dropdown form-control" id="pelajaran" name="pelajaran">
-									<option></option>
-									<option value="IPA">IPA</option>
-									<option value="IPS">IPS</option>
-									<option value="Penjaskes">Penjaskes</option>
-								</select>
-							</div>
-
-							<div class="form-group">
-								<label for="Jabatan">Jabatan</label>
-								<select class="multiselect-dropdown form-control" id="Jabatan" name="jabatan">
-									<option></option>
-									<option value="Guru">Guru</option>
-									<option value="Wali Kelas">Wali Kelas</option>
-									<option value="Kepsek">Kepsek</option>
-								</select>
+								<label for="Password" class="">Password</label>
+								<input name="password" id="Password" placeholder="Password" type="password" class="form-control">
 							</div>
 
 							<div class="form-group">
@@ -421,6 +382,7 @@ SDN 1 Gendoh
 									<option value="6">6</option>
 								</select>
 							</div>
+
 						</div>
 					</div>
 
