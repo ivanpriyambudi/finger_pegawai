@@ -68,6 +68,18 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="{{route('AdminSekolahSuratIzin')}}" class="
+  {{ (request()->routeIs(
+
+    'AdminSekolahSuratIzin'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-mail-open-file"></i>
+    Surat Izin
+  </a>
+</li>
 
 <li class="app-sidebar__heading">Siswa</li>
 <li>
@@ -121,6 +133,20 @@
       </a>
     </li>
   </ul>
+</li>
+
+<li class="app-sidebar__heading">Wali Murid</li>
+<li>
+  <a href="{{route('AdminSekolahTabelWaliMuird')}}" class="
+  {{ (request()->routeIs(
+
+    'AdminSekolahTabelWaliMuird'
+
+    )) ? 'mm-active' : '' }}
+    ">
+    <i class="metismenu-icon pe-7s-like"></i>
+    Tabel Wali Murid
+  </a>
 </li>
 
 @endsection

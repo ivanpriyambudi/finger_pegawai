@@ -16,51 +16,57 @@ Dashboard
 Dashboard
 @endsection
 @section('page-title-desk')
-Dashboard Admin Sekolah
+Dashboard Admin Sekolah SDN 1 Gendoh
 @endsection
 
 {{-- //////////////////////////////////////////////////////////////// action --}}
 @section('page-title-action')
-<div class="d-inline-block dropdown">
-
-	<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-shadow dropdown-toggle btn btn-info">
-		<span class="btn-icon-wrapper pr-2 opacity-7">
-			<i class="fa fa-business-time fa-w-20"></i>
-		</span>
-		Buttons
-	</button>
-
-	<div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-		<ul class="nav flex-column">
-			<li class="nav-item">
-				<a href="javascript:void(0);" class="nav-link">
-					<i class="nav-link-icon lnr-inbox"></i>
-					<span>Inbox</span>
-					<div class="ml-auto badge badge-pill badge-secondary">86</div>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="javascript:void(0);" class="nav-link">
-					<i class="nav-link-icon lnr-book"></i>
-					<span>Book</span>
-					<div class="ml-auto badge badge-pill badge-danger">5</div>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a href="javascript:void(0);" class="nav-link">
-					<i class="nav-link-icon lnr-picture"></i>
-					<span>Picture</span>
-				</a>
-			</li>
-		</ul>
-	</div>
-
-</div>
 @endsection
 {{-- //////////////////////////////////////////////////////////////////////////// /page title --}}
 
 {{-- /////////////////////////////////////////////////////////////////////////// konten --}}
 @section('page-content')
+<div class="row animated bounceInDown">
+	<div class="col-lg-6 col-xl-4">
+		<div class="card mb-3 widget-content">
+			<div class="widget-content-wrapper">
+				<div class="widget-content-left">
+					<div class="widget-heading">Guru</div>
+					<div class="widget-subheading">Total Absensi Masuk</div>
+				</div>
+				<div class="widget-content-right">
+					<div class="widget-numbers text-success"><span>12</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6 col-xl-4">
+		<div class="card mb-3 widget-content">
+			<div class="widget-content-wrapper">
+				<div class="widget-content-left">
+					<div class="widget-heading">Wali Kelas</div>
+					<div class="widget-subheading">Total Absensi Tidak Masuk</div>
+				</div>
+				<div class="widget-content-right">
+					<div class="widget-numbers text-primary"><span>100</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6 col-xl-4">
+		<div class="card mb-3 widget-content">
+			<div class="widget-content-wrapper">
+				<div class="widget-content-left">
+					<div class="widget-heading"></div>
+					<div class="widget-subheading">Total Absensi Izin</div>
+				</div>
+				<div class="widget-content-right">
+					<div class="widget-numbers text-warning"><span>0</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 @endsection
 {{-- /////////////////////////////////////////////////////////////////////////// /konten --}}
 

@@ -15,6 +15,8 @@ class AdminSekolahController extends Controller
 		return view('admin-sekolah.dashboard.dashboard');
 	}
 
+	//--------------------------------------------------------- Guru
+
 	public function AdminSekolah_TabelGuru()
 	{
 		$guru = Guru::all();
@@ -32,6 +34,13 @@ class AdminSekolahController extends Controller
 		return view('admin-sekolah.guru.rekap');
 	}
 
+	public function AdminSekolah_IzinGuru()
+	{
+		return view('admin-sekolah.guru.izin');
+	}
+
+	//--------------------------------------------------------- Siswa
+
 	public function AdminSekolah_TabelSiswa()
 	{
 		return view('admin-sekolah.siswa.tabel-siswa');
@@ -45,6 +54,13 @@ class AdminSekolahController extends Controller
 	public function AdminSekolah_RekapSiswa()
 	{
 		return view('admin-sekolah.siswa.rekap');
+	}
+
+	//--------------------------------------------------------- Wali Murid
+
+	public function AdminSekolah_TabelWaliMurid()
+	{
+		return view('admin-sekolah.walimurid.tabel-walimurid');
 	}
 
 	// public function Delete_Guru($id)
