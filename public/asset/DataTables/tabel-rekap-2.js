@@ -1,10 +1,26 @@
 $(document).ready(function() {
 
-$('#gg').DataTable( {
+	 $('#gg thead tr').clone(true).appendTo( '#gg thead' );
+    
+    $('#gg thead tr:eq(1) th.jos').each( function (i) {
+        var title = $(this).text();
+        $(this).html( '<input id="s'+title+'" type="text" placeholder="'+title+'" style="display: none" />' );
+ 
+        $( 'input', this ).on( 'keyup change', function () {
+            if ( table.column(i).search() !== this.value ) {
+                table
+                    .column(i)
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
 
-	// $.fn.dataTable.ext.errMode = 'throw',
-	// serverSide: true,
-	// ajax: "http://127.0.0.1:8000/admin-sekolah/tabel-guru",
+
+var table = $('#gg').DataTable( {
+
+	orderCellsTop: true,
+    fixedHeader: true,
 
 	"dom": 
 
@@ -43,6 +59,13 @@ $('#gg').DataTable( {
 
 	buttons: [
 	{
+        text: 'Filter',
+        action: function ( e, dt, node, config ) {
+         input.onclick = function() { filter() };
+        }
+     },
+
+	{
 		extend: 'excel',
 		text: '<i class="fa fa-file-excel-o"></i> Excel',
 		messageTop: null
@@ -54,9 +77,5 @@ $('#gg').DataTable( {
 	},
 	]
 } );
-
-
-
-$("div.icon").html('<i class="header-icon pe-7s-user icon-gradient bg-plum-plate"></i>Header Menu');
 
 } );

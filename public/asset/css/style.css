@@ -166,3 +166,15 @@ table.ht-table > tbody > tr > td:first-child {
   flex: 1 1 auto;
   padding: .5rem 2.5rem 2.5rem 2.5rem;
 }
+
+
+.jos.no > input {
+  display: none;
+}
+
+.jos > input {
+  width: 100px;
+  border: 1px solid #e9ecef;
+  border-radius: 3px;
+  padding: 5px 10px;
+}

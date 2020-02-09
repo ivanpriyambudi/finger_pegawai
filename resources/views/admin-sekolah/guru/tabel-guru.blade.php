@@ -47,16 +47,25 @@ SDN 1 Gendoh
 <div class="row">
 	<div id="tab" class="col-md-12 animated bounceInRight">
 
+		{{-- <div id="x2">
+			<a onclick="filter()" class="btn-shadow btn btn-info text-white">
+				<span class="btn-icon-wrapper pr-2">
+					<i class="fa fa-plus fa-w-20 tex"></i>
+				</span>
+				Filter
+			</a>
+		</div> --}}
+		
 		<table id="gg" class="table table-hover ht-table">
 			<thead>
 				<tr>
-					<th style="width: 10px;">No</th>
-					<th>Nama</th>
-					<th>NIP</th>
-					<th>Jabatan</th>
-					<th>Mata Pelajaran</th>
-					<th>Status</th>
-					<th>Action</th>
+					<th class="jos" style="width: 10px;">No</th>
+					<th class="jos">Nama</th>
+					<th class="jos no">NIP</th>
+					<th class="jos no">Jabatan</th>
+					<th class="jos no">Mata Pelajaran</th>
+					<th class="jos no">Status</th>
+					<th class="jos no">Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -243,8 +252,53 @@ SDN 1 Gendoh
 
 
 @section('js-plus')
-<script src="{{asset('asset/DataTables/tabel-rekap.js')}}"></script>
+<script src="{{asset('asset/DataTables/tabel-rekap-2.js')}}"></script>
 <script type="text/javascript">
+
+	function filter() {
+		var x = document.getElementById("sNama");
+		var xx = document.getElementById("sNIP");
+		var xxx = document.getElementById("sJabatan");
+		var xxxx = document.getElementById("sMata Pelajaran");
+
+		var j = document.getElementById("x2");
+
+
+		if (x.style.display === "none" || i.style.display === "none") {
+			x.style.display = "block";
+			xx.style.display = "block";
+			xxx.style.display = "block";
+			xxxx.style.display = "block";
+
+			j.style.display = "none";
+		}
+	}
+
+	// function unfilter() {
+	// 	var x = document.getElementById("sNama");
+	// 	var xx = document.getElementById("sNIP");
+	// 	var xxx = document.getElementById("sJabatan");
+	// 	var xxxx = document.getElementById("sMata Pelajaran");
+
+	// 	var y = document.getElementById("x");
+
+	// 	var i = document.getElementById("s2");
+	// 	var j = document.getElementById("x2");
+
+
+	// 	if (x.style.display === "none" || i.style.display === "none") {
+	// 		x.style.display = "block";
+	// 		xx.style.display = "block";
+	// 		xxx.style.display = "block";
+	// 		xxxx.style.display = "block";
+	// 		y.style.display = "none";
+
+	// 		i.style.display = "block";
+	// 		j.style.display = "none";
+	// 	}
+	// }
+
+
 	function myDetail() {
 		var x = document.getElementById("detail");
 		var y = document.getElementById("tab");
